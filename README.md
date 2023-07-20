@@ -1,16 +1,9 @@
 # organizer
 
-A new Flutter project.
+This project is designed to help the user organize their week using the Covey Planning technique from the book, "The Seven Habits of Highly Effective People."
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The technique involves a few simple steps:
+1. Identify Roles
+1. Set Goals in each role
+1. Schedule Goals during the upcoming week
+1. Adapt daily
