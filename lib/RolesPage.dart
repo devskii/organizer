@@ -20,17 +20,16 @@ class RolesPage extends StatefulWidget {
 }
 
 class _RolesPageState extends State<RolesPage> {
-  int _counter = 0;
   List<Widget> inputBoxes = [];
+  List<String> roles = ["bro", "engineer"];
 
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
+      // inputBoxes without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
 
       const newTextField = TextField(
         decoration: InputDecoration(
@@ -80,7 +79,7 @@ class _RolesPageState extends State<RolesPage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Padding(
-          padding: EdgeInsets.all(32.0),
+          padding: const EdgeInsets.all(32.0),
           child: Column(
             // Column is also a layout widget. It takes a list of children and
             // arranges them vertically. By default, it sizes itself to fit its
@@ -111,14 +110,15 @@ class _RolesPageState extends State<RolesPage> {
         child: const Icon(Icons.add),
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
+        child: SizedBox(
           height: 56.0,
           child: TextButton(
-            child: Text('Next: Goals for the upcoming week'),
+            child: const Text('Next: Goals for the upcoming week'),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => GoalsPage()),
+                MaterialPageRoute(
+                    builder: (context) => GoalsPage(roles: roles)),
               );
             },
           ),
